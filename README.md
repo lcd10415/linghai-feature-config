@@ -2,15 +2,30 @@
 
 领嗨熊仔 · 服务端功能开关（全用户一致，无审核差异化）。
 
-## 配置地址（App 拉取）
+## 可视化后台
 
-推送到 `main` 后可用：
+GitHub Pages 开启后访问：
+
+```
+https://lcd10415.github.io/linghai-feature-config/admin/
+```
+
+使用方式：
+
+1. 打开后台页面
+2. 填入 GitHub Personal Access Token（需要 `repo`，或 Fine-grained：本仓库 Contents Read/Write）
+3. 点「连接并加载」→ 切换开关 →「保存到 GitHub」
+4. App 下次启动拉取 `features.json` 生效
+
+Token 只存在浏览器 `localStorage`，不会发到第三方服务器。
+
+## App 拉取地址
 
 ```
 https://raw.githubusercontent.com/lcd10415/linghai-feature-config/main/features.json
 ```
 
-## 开关说明
+## 开关字段
 
 | 字段 | 含义 | 默认 |
 | --- | --- | --- |
@@ -22,5 +37,4 @@ https://raw.githubusercontent.com/lcd10415/linghai-feature-config/main/features.
 | `my_team` | 我的团队 | `false` |
 | `recharge` | 充值 | `false` |
 
-改 JSON → `git commit` → `git push`，客户端下次启动（或缓存过期）生效。  
 **请保持对所有用户同一套配置**，不要按审核员/地区做差异化。

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>领嗨熊仔 · 功能开关后台</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <header class="top">
+    <div class="brand">
+      <span class="mark"></span>
+      <div>
+        <h1>领嗨熊仔</h1>
+        <p>功能开关后台 · 全用户同一配置</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <a class="ghost" href="https://raw.githubusercontent.com/lcd10415/linghai-feature-config/main/features.json" target="_blank" rel="noopener">查看 JSON</a>
+      <button type="button" id="btnReload" class="ghost" disabled>刷新</button>
+      <button type="button" id="btnSave" class="primary" disabled>保存到 GitHub</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="auth panel" id="authPanel">
+      <h2>连接 GitHub</h2>
+      <p class="hint">使用 Personal Access Token（需 <code>repo</code> 或 Contents 读写权限）。Token 只存在本机浏览器，不会上传到其它服务器。</p>
+      <label class="field">
+        <span>Token</span>
+        <input id="token" type="password" autocomplete="off" placeholder="ghp_… 或 github_pat_…" />
+      </label>
+      <div class="row">
+        <button type="button" id="btnConnect" class="primary">连接并加载</button>
+        <button type="button" id="btnClearToken" class="ghost">清除本地 Token</button>
+      </div>
+      <p class="status" id="authStatus"></p>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>功能开关</h2>
+          <span class="badge" id="dirtyBadge" hidden>未保存</span>
+        </div>
+        <p class="hint">默认关闭。打开后对<strong>所有用户</strong>同时生效（含审核环境）。</p>
+        <div id="flags" class="flags"></div>
+      </div>
+
+      <div class="side">
+        <div class="panel">
+          <h2>元信息</h2>
+          <label class="field">
+            <span>版本 version</span>
+            <input id="version" type="number" min="1" step="1" />
+          </label>
+          <label class="field">
+            <span>备注 note</span>
+            <textarea id="note" rows="4" placeholder="给运营/研发看的说明"></textarea>
+          </label>
+          <dl class="meta">
+            <div><dt>updated_at</dt><dd id="updatedAt">—</dd></div>
+            <div><dt>仓库</dt><dd>lcd10415/linghai-feature-config</dd></div>
+            <div><dt>文件</dt><dd>features.json</dd></div>
+            <div><dt>SHA</dt><dd id="sha" class="mono">—</dd></div>
+          </dl>
+        </div>
+        <div class="panel">
+          <h2>预览</h2>
+          <pre id="preview" class="preview">{}</pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="./app.js"></script>
+</body>
+</html>
