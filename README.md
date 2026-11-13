@@ -15,7 +15,7 @@ https://lcd10415.github.io/linghai-feature-config/admin/
 1. 打开后台页面
 2. 填入 GitHub Personal Access Token（需要 `repo`，或 Fine-grained：本仓库 Contents Read/Write）
 3. 点「连接并加载」→ 切换开关 →「保存到 GitHub」
-4. App 下次启动拉取 `features.json` 生效
+4. App 下次启动 / 再进「我的」页拉取 `features.json` 生效
 
 Token 只存在浏览器 `localStorage`，不会发到第三方服务器。
 
@@ -24,6 +24,15 @@ Token 只存在浏览器 `localStorage`，不会发到第三方服务器。
 ```
 https://raw.githubusercontent.com/lcd10415/linghai-feature-config/main/features.json
 ```
+
+## 双模式
+
+| 开关 | 表现 |
+| --- | --- |
+| `true` | 「我的」显示对应入口，可正常使用 |
+| `false` | 入口从界面隐藏；误触也会 Toast 拦截 |
+
+隐藏范围：充值、提现、我的团队、团队人数、今日收益、邀请码、邀请好友、绑定邀请码。
 
 ## 开关字段
 
