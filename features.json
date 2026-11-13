@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "updated_at": "2026-11-13",
+  "note": "同一配置对所有用户生效（含审核）。默认全部关闭；需要时改 true 并 push。",
+  "features": {
+    "payout": false,
+    "add_payout": false,
+    "cream_off": false,
+    "apply_agent": false,
+    "bind_invite": false,
+    "my_team": false,
+    "recharge": false
+  }
+}
