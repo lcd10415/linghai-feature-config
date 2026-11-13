@@ -47,3 +47,10 @@ https://raw.githubusercontent.com/lcd10415/linghai-feature-config/main/features.
 | `recharge` | 充值 | `false` |
 
 **请保持对所有用户同一套配置**，不要按审核员/地区做差异化。
+
+## Public pages (GitHub Pages)
+
+- Admin: https://lcd10415.github.io/linghai-feature-config/admin/
+- Privacy policy: https://lcd10415.github.io/linghai-feature-config/privacy-policy/
+- Support: https://lcd10415.github.io/linghai-feature-config/support/
+
