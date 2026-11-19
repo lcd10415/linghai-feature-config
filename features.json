@@ -1,7 +1,7 @@
 {
-  "version": 1,
-  "updated_at": "2026-11-13",
-  "note": "同一配置对所有用户生效（含审核）。默认全部关闭；需要时改 true 并 push。",
+  "version": 2,
+  "updated_at": "2026-11-19",
+  "note": "同一配置对所有用户生效（含审核）。home_drama=false 时首页仅本地短故事；true 恢复短视频/短剧/短故事。",
   "features": {
     "payout": false,
     "add_payout": false,
@@ -9,6 +9,7 @@
     "apply_agent": false,
     "bind_invite": false,
     "my_team": false,
-    "recharge": false
+    "recharge": false,
+    "home_drama": false
   }
 }

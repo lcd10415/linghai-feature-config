@@ -6,6 +6,7 @@
   const TOKEN_KEY = "linghai_gh_token";
 
   const FLAG_META = [
+    { key: "home_drama", title: "首页短剧/短视频", desc: "关=仅本地短故事；开=短视频+短剧+短故事（现网形态）" },
     { key: "payout", title: "提现账户", desc: "PayoutsActivity · 提现账户管理" },
     { key: "add_payout", title: "添加提现账户", desc: "AddPayoutsActivity · 绑定提现方式" },
     { key: "cream_off", title: "提现记录", desc: "CreamOffRecordActivity · 提现流水" },
