@@ -10,39 +10,110 @@
     main { max-width:760px; margin:0 auto; padding:48px 20px 88px; }
     h1 { font-size:1.7rem; margin:0 0 6px; }
     h2 { font-size:1.1rem; margin-top:28px; color:var(--accent); }
+    h3 { font-size:1rem; margin:18px 0 8px; }
     .meta { color:var(--muted); margin-bottom:24px; font-size:.95rem; }
     a { color:var(--accent); }
     .en { margin-top:48px; padding-top:28px; border-top:1px solid rgba(0,0,0,.08); }
+    .sdk { background:rgba(11,110,79,.06); border-radius:10px; padding:12px 14px; margin:12px 0; }
+    .sdk p { margin:6px 0; }
+    .note { color:var(--muted); font-size:.92rem; }
   </style>
 </head>
 <body>
 <main>
   <h1>领嗨熊仔隐私政策</h1>
-  <p class="meta">生效日期：2026-11-13 · 包名：com.linghai.xiongzai · 运营方：山西领嗨者文化传媒有限公司</p>
+  <p class="meta">生效日期：2026-11-20 · 包名：com.linghai.xiongzai · 运营方：山西领嗨者文化传媒有限公司</p>
 
-  <p>欢迎使用「领嗨熊仔」。我们重视您的隐私。请在使用前阅读本政策。</p>
+  <p>欢迎使用「领嗨熊仔」。我们重视您的隐私。请在使用前仔细阅读并同意本政策。您点击同意后，我们将按照本政策处理相关信息；广告等第三方 SDK 也可能在您同意后按其规则收集信息。</p>
 
   <h2>1. 我们收集的信息</h2>
   <ul>
-    <li>账号信息：若您注册/登录，可能收集手机号或第三方登录标识。</li>
-    <li>设备与日志：设备型号、系统版本、网络状态、崩溃日志，用于稳定与安全。</li>
-    <li>广告标识符（如 Google Advertising ID）：用于广告展示与效果衡量（可在系统设置中限制）。</li>
-    <li>使用数据：浏览、播放与互动记录，用于内容推荐与产品优化。</li>
+    <li>账号信息：若您注册/登录，可能收集手机号、验证码或第三方登录标识（如微信 OpenID）。</li>
+    <li>设备信息：设备型号、操作系统版本、网络类型、运营商信息、设备标识符（包括但不限于 Android ID、OAID、IMEI/MEID（在系统与权限允许时）、IMSI、设备序列号、MAC 地址、SIM 卡序列号、ICCID）、屏幕分辨率、传感器信息（如重力/加速度传感器，用于适配屏幕方向与广告展示）。</li>
+    <li>应用列表信息：已安装应用软件列表 / 软件安装列表（用于广告投放、反作弊与安全风控，主要由广告 SDK 收集）。</li>
+    <li>存储与文件：在您授权后访问外置存储相关数据，用于缓存、媒体与广告素材读写。</li>
+    <li>广告标识符：如 Google Advertising ID / 广告 ID，用于广告展示与效果衡量（可在系统设置中限制）。</li>
+    <li>日志与诊断：IP 地址、崩溃日志、运行日志、网络诊断信息，用于稳定与安全。</li>
+    <li>使用数据：浏览、阅读/播放与互动记录，用于内容服务与产品优化。</li>
+    <li>剪贴板：在特定分享、口令/链接识别场景下可能读取剪贴板内容（如适用）。</li>
   </ul>
+  <p class="note">说明：上述字段并不表示我们必然全部收集；实际以您的系统版本、授权情况及第三方 SDK 实现为准。若检测到设备序列号等具体字段，本政策按具体名称披露，而非笼统称为「硬件信息」。</p>
 
   <h2>2. 使用目的</h2>
   <ul>
-    <li>提供短剧 / 内容浏览等核心功能；</li>
-    <li>账号管理、客服与安全保障；</li>
-    <li>展示广告并衡量效果（如适用）；</li>
+    <li>提供阅读 / 内容浏览等核心功能；</li>
+    <li>账号管理、客服与安全保障、反作弊；</li>
+    <li>展示广告、进行广告归因与效果衡量；</li>
     <li>遵守法律法规与监管要求。</li>
   </ul>
 
-  <h2>3. 第三方 SDK</h2>
-  <p>本应用可能集成广告、统计、推送或播放相关 SDK。第三方将按其隐私政策处理数据。请以各 SDK 官方说明为准。</p>
+  <h2>3. 第三方 SDK 清单（明示收集的个人信息）</h2>
+  <p>为实现广告展示、统计分析、登录与内容服务，本应用集成如下第三方 SDK。SDK 可能通过本地采集、接口传输等方式处理信息。请您知悉：</p>
+
+  <div class="sdk">
+    <h3>3.1 穿山甲广告 SDK（Pangolin / 字节跳动）</h3>
+    <p><strong>使用目的：</strong>展示开屏、信息流、激励等广告，进行广告填充、反作弊与效果统计。</p>
+    <p><strong>使用场景：</strong>您同意隐私政策后，在应用启动、内容浏览、任务激励等场景加载广告时。</p>
+    <p><strong>收集方式：</strong>SDK 本地采集并传输至第三方。</p>
+    <p><strong>第三方主体：</strong>北京巨量引擎网络技术有限公司等字节跳动关联方。</p>
+    <p><strong>收集的个人信息类型：</strong>设备标识符（含 Android ID、OAID、IMEI、IMSI、设备序列号、MAC 地址、SIM 卡信息等，视系统与权限而定）、设备型号/系统版本/网络信息、<strong>已安装应用软件列表</strong>、广告交互数据、位置相关信息（如粗略位置，视授权而定）、传感器信息、应用运行状态等。官方说明：<a href="https://www.csjplatform.com/privacy" target="_blank" rel="noopener">穿山甲隐私政策</a>。</p>
+  </div>
+
+  <div class="sdk">
+    <h3>3.2 快手广告 SDK</h3>
+    <p><strong>使用目的：</strong>广告展示、投放与反作弊。</p>
+    <p><strong>使用场景：</strong>同意隐私政策后加载快手广告时。</p>
+    <p><strong>收集方式：</strong>SDK 本地采集。</p>
+    <p><strong>第三方主体：</strong>北京快手科技有限公司及其关联方。</p>
+    <p><strong>收集的个人信息类型：</strong>设备标识符（含 Android ID、OAID、IMEI、MAC 地址等）、设备与网络信息、<strong>已安装应用软件列表</strong>、广告数据等。详见快手联盟隐私政策。</p>
+  </div>
+
+  <div class="sdk">
+    <h3>3.3 优量汇 / 广点通 SDK（腾讯）</h3>
+    <p><strong>使用目的：</strong>广告展示与效果统计。</p>
+    <p><strong>使用场景：</strong>同意隐私政策后加载腾讯广告时。</p>
+    <p><strong>收集方式：</strong>SDK 本地采集。</p>
+    <p><strong>第三方主体：</strong>深圳市腾讯计算机系统有限公司。</p>
+    <p><strong>收集的个人信息类型：</strong>设备标识符（含 Android ID、OAID、IMEI、MAC 地址等）、设备与网络信息、<strong>已安装应用软件列表</strong>、广告数据等。详见优量汇隐私保护声明。</p>
+  </div>
+
+  <div class="sdk">
+    <h3>3.4 百度移动广告 SDK</h3>
+    <p><strong>使用目的：</strong>广告展示与效果统计。</p>
+    <p><strong>使用场景：</strong>同意隐私政策后加载百度广告时。</p>
+    <p><strong>收集方式：</strong>SDK 本地采集。</p>
+    <p><strong>第三方主体：</strong>北京百度网讯科技有限公司。</p>
+    <p><strong>收集的个人信息类型：</strong>设备标识符（含 Android ID、OAID、IMEI、MAC 地址等）、设备与网络信息、<strong>已安装应用软件列表</strong>、广告数据等。详见百度联盟隐私政策。</p>
+  </div>
+
+  <div class="sdk">
+    <h3>3.5 广告聚合 / 第三方广告平台 SDK（如 AdSer / OSET 等）</h3>
+    <p><strong>使用目的：</strong>广告聚合调度、瀑布/竞价填充与监测。</p>
+    <p><strong>使用场景：</strong>同意隐私政策后初始化广告组件并请求广告时。</p>
+    <p><strong>收集方式：</strong>SDK 本地采集并可能转发至下游广告平台。</p>
+    <p><strong>收集的个人信息类型：</strong>设备标识符（含 Android ID、OAID、IMEI、MAC 地址等）、设备与网络信息、<strong>已安装应用软件列表</strong>、广告请求与展示数据等。</p>
+  </div>
+
+  <div class="sdk">
+    <h3>3.6 微信开放平台 SDK</h3>
+    <p><strong>使用目的：</strong>帮助用户使用微信登录 / 分享（如您选择使用）。</p>
+    <p><strong>使用场景：</strong>您主动选择微信登录或分享时。</p>
+    <p><strong>收集方式：</strong>SDK 本地采集 / 授权回传。</p>
+    <p><strong>第三方主体：</strong>深圳市腾讯计算机系统有限公司。</p>
+    <p><strong>收集的个人信息类型：</strong>微信昵称、头像、OpenID/UnionID 等您授权的信息，以及必要的设备信息。</p>
+  </div>
+
+  <div class="sdk">
+    <h3>3.7 内容相关 SDK（如短视频/短剧/阅读组件，视功能开关启用）</h3>
+    <p><strong>使用目的：</strong>提供内容浏览、播放或阅读能力。</p>
+    <p><strong>使用场景：</strong>您进入相应内容页面时（功能开启时）。</p>
+    <p><strong>收集的个人信息类型：</strong>设备信息、网络信息、内容浏览/播放记录、必要的设备标识符等，具体以其官方隐私政策为准。</p>
+  </div>
+
+  <p class="note">特别提示：本应用及上述 SDK 可能收集 <strong>MAC 地址</strong>、<strong>已安装应用软件列表（软件安装列表）</strong> 等个人信息。该类信息主要用于广告投放、反作弊、安全风控与统计分析。我们将在您同意本隐私政策后再初始化相关广告 SDK。</p>
 
   <h2>4. 权限说明</h2>
-  <p>我们仅申请实现功能所必要的权限（如网络访问）。当前 Google Play 版本不使用无障碍服务，也不申请安装未知应用、读取电话状态、精确位置或查询全部已安装应用等能力。</p>
+  <p>我们仅申请实现功能所必要的权限（如网络访问、存储读写等）。部分广告 SDK 可能在授权范围内读取设备标识与应用列表信息。您可在系统设置中管理权限；拒绝非必要权限可能影响广告或相关功能，但不影响基本阅读浏览（以实际版本为准）。</p>
 
   <h2>5. 存储与安全</h2>
   <p>我们采取合理的技术与管理措施保护数据。数据可能存储于运营方或其服务商服务器所在地区。</p>
@@ -51,18 +122,18 @@
   <p>在适用法律允许范围内，您可申请访问、更正、删除个人信息或注销账号。请通过下方邮箱联系我们。</p>
 
   <h2>7. 儿童</h2>
-  <p>本应用不面向 13 岁以下儿童。若发现误收集儿童信息，我们将尽快删除。</p>
+  <p>本应用不面向 14 周岁以下儿童。若发现误收集儿童信息，我们将尽快删除。</p>
 
   <h2>8. 更新</h2>
-  <p>我们可能更新本政策，并在本页面公布生效日期。重大变更将以合理方式提示。</p>
+  <p>我们可能更新本政策，并在本页面公布生效日期。重大变更将以合理方式提示。请以本页面最新版本为准。</p>
 
   <h2>9. 联系我们</h2>
-  <p>邮箱：<a href="mailto:support@example.com">support@example.com</a>（请替换为真实联系邮箱）</p>
+  <p>运营方：山西领嗨者文化传媒有限公司<br/>邮箱：<a href="mailto:support@example.com">support@example.com</a>（请替换为真实联系邮箱）</p>
 
   <div class="en">
     <h1>Linghai Bear Privacy Policy</h1>
-    <p class="meta">Effective: 2026-11-13 · Package: com.linghai.xiongzai</p>
-    <p>We collect account data (if you sign in), device/log data, advertising ID, and usage data to provide short-drama browsing, keep the service secure, show ads, and improve recommendations. Third-party SDKs may process data under their own policies. You may request access, correction, deletion, or account deletion by contacting us. This app is not directed to children under 13.</p>
+    <p class="meta">Effective: 2026-11-20 · Package: com.linghai.xiongzai</p>
+    <p>We may collect account data (if you sign in), device identifiers (including Android ID, OAID, IMEI where permitted, MAC address, serial numbers), installed application list, network/log data, advertising ID, usage data, and limited clipboard data in sharing scenarios. Advertising SDKs such as Pangle (Pangolin), Kuaishou Ads, Tencent GDT, Baidu Ads, and ad aggregation SDKs may collect device identifiers (including MAC address) and installed app lists for ad serving, anti-fraud, and analytics after you consent to this policy. WeChat Open SDK may be used for login/share when you choose it. Contact us to exercise access, correction, deletion, or account deletion rights. This app is not directed to children under 14.</p>
     <p>Contact: <a href="mailto:support@example.com">support@example.com</a></p>
   </div>
 </main>
