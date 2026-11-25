@@ -1,7 +1,7 @@
 {
-  "version": 2,
-  "updated_at": "2026-11-19",
-  "note": "同一配置对所有用户生效（含审核）。home_drama=false 时首页仅本地短故事；true 恢复短视频/短剧/短故事。",
+  "version": 3,
+  "updated_at": "2026-11-25",
+  "note": "同一配置对所有用户生效（含审核）。home_drama=false 时首页仅本地短故事；work_center=false 时隐藏任务中心/广告联盟（历史阅读形态），true 显示任务中心与金币。",
   "features": {
     "payout": false,
     "add_payout": false,
@@ -10,6 +10,7 @@
     "bind_invite": false,
     "my_team": false,
     "recharge": false,
-    "home_drama": false
+    "home_drama": false,
+    "work_center": false
   }
 }

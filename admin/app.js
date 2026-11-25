@@ -7,6 +7,7 @@
 
   const FLAG_META = [
     { key: "home_drama", title: "首页短剧/短视频", desc: "关=仅本地短故事；开=短视频+短剧+短故事（现网形态）" },
+    { key: "work_center", title: "任务中心/金币", desc: "关=历史阅读形态（隐藏任务中心与广告联盟 Tab）；开=显示任务中心与金币" },
     { key: "payout", title: "提现账户", desc: "PayoutsActivity · 提现账户管理" },
     { key: "add_payout", title: "添加提现账户", desc: "AddPayoutsActivity · 绑定提现方式" },
     { key: "cream_off", title: "提现记录", desc: "CreamOffRecordActivity · 提现流水" },
